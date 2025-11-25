@@ -64,9 +64,9 @@ h1, h2, h3, h4, p, li, a {
 
 /* Main Title Style (Inside the image banner) */
 .main-title {
-    font-family: 'EB Garamond', serif; /* <--- GARAMOND FOR MAIN TITLE */
+    font-family: 'EB Garamond', serif; /* GARAMOND FOR MAIN TITLE */
     text-align: center;
-    font-size: 3.2em; /* Slightly larger for impact */
+    font-size: 3.2em; 
     font-weight: 700;
     color: #00FFFF !important; /* Sharp Cyan color */
     text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 0.5); 
@@ -82,7 +82,7 @@ h2 {
     margin-top: 5px; 
     margin-bottom: 40px; 
     color: #C0C0C0 !important;
-    font-family: 'EB Garamond', serif; /* <--- GARAMOND FOR AUTHOR NAME */
+    font-family: 'EB Garamond', serif; /* GARAMOND FOR AUTHOR NAME */
     font-size: 1.5em;
 }
 
@@ -90,18 +90,18 @@ h2 {
 h3 {
     margin-top: 60px; 
     margin-bottom: 25px;
-    font-family: 'Montserrat', sans-serif; /* Montserrat for impact */
-    color: #FF00FF !important; /* Rich Magenta accent for sections */
+    font-family: 'Montserrat', sans-serif; 
+    color: #FF00FF !important; 
     font-weight: 700; 
     font-size: 1.8em;
     padding-left: 10px; 
-    border-left: 4px solid #8A2BE2; /* BlueViolet accent line */
+    border-left: 4px solid #8A2BE2; 
 }
 
 /* Base Subheadings (H4) - Overridden by color classes */
 h4 {
-    font-family: 'Montserrat', sans-serif; /* Montserrat for impact */
-    color: #00FFFF !important; /* Default Cyan color for any H4 without a class */
+    font-family: 'Montserrat', sans-serif; 
+    color: #00FFFF !important; 
     margin-top: 30px;
     margin-bottom: 15px;
     padding-left: 10px;
@@ -109,23 +109,23 @@ h4 {
 
 /* --- COLOR CODING FOR H4 SUBHEADINGS --- */
 .red-h4 {
-    color: #FF0000 !important; /* UPDATED: Pure Red for Stats/Critical Data */
-    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8); /* Stronger glow */
+    color: #FF0000 !important; 
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8); 
 }
 
 .green-h4 {
-    color: #00FF00 !important; /* UPDATED: Pure Lime Green for Execution/Compliance */
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8); /* Stronger glow */
+    color: #00FF00 !important; 
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8); 
 }
 
 .yellow-h4 {
-    color: #FFD700 !important; /* Gold/Yellow for general topics or lists */
+    color: #FFD700 !important; 
     text-shadow: 0 0 5px rgba(255, 215, 0, 0.6);
 }
 
 /* Base font size and spacing for content */
 p, li {
-    font-size: 1.15em; /* Adjusted size for Fira Sans */
+    font-size: 1.15em; 
     line-height: 1.8; 
     margin-bottom: 1.2em; 
     padding-left: 10px; 
@@ -141,10 +141,10 @@ li {
     margin-bottom: 0.8em;
 }
 
-/* 5. CONTENT CONTAINER */
+/* 5. CONTENT CONTAINER (For Laptops/Desktops) */
 .content-wrapper {
     background-color: rgba(10, 10, 20, 0.95); 
-    padding: 60px 100px; 
+    padding: 60px 100px; /* Large padding for big screens */
     margin: 0 auto; 
     max-width: 1200px; 
     box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8); 
@@ -152,4 +152,45 @@ li {
     border-left: 1px solid rgba(138, 43, 226, 0.5); 
     border-right: 1px solid rgba(138, 43, 226, 0.5);
     border-bottom: 1px solid rgba(138, 43, 226, 0.5);
+}
+
+/* ------------------------------------------- */
+/* 6. RESPONSIVE DESIGN (FOR PHONES AND TABLETS) */
+/* ------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Adjust banner text for smaller screens */
+    .main-title {
+        font-size: 2em;
+    }
+
+    /* Reduce padding and margins on the main content container */
+    .content-wrapper {
+        padding: 30px 20px; /* Reduced padding for phones/tablets */
+        /* Remove max-width restriction on the small screens */
+        max-width: 100%; 
+        box-shadow: none; /* Remove box shadow/borders for cleaner mobile look */
+        border: none;
+    }
+    
+    /* Adjust text sizes to fit better on mobile */
+    p, li {
+        font-size: 1em;
+        padding-left: 0;
+    }
+
+    /* Reduce overall margins for headers */
+    h3 {
+        margin-top: 30px;
+        font-size: 1.5em;
+    }
+
+    /* Center the banner and text better */
+    .header-banner {
+        height: 250px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
 }

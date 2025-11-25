@@ -1,0 +1,155 @@
+/* KEYFRAMES FOR ABSTRACT MOTION BACKGROUND */
+@keyframes background-pan {
+    from { background-position: 0% 0%; }
+    to { background-position: 100% 100%; }
+}
+
+/* 1. FONT IMPORTS (Professional fonts for headings and body) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=EB+Garamond:wght@400;700&family=Fira+Sans:wght@400;700&display=swap');
+
+/* 2. BODY AND BACKGROUND (Subtle Motion & Deep Base) */
+body, .site {
+    /* Abstract lines of code/data flow motion background */
+    background-image: url('https://images.unsplash.com/photo-1518770660439-46777f8ce04a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218fHxjb2RlLGRhdGEsYmx1ZSwgYWJzdHJhY3R8fHx8fHwxNzAzNzY1NDg1&ixlib=rb-4.0.3&q=80&w=1080');
+    background-size: 200% 200%; 
+    background-attachment: fixed;
+    background-color: #1a1a2e; /* Deep blue-grey base */
+    animation: background-pan 60s linear infinite; /* Smooth, continuous pan */
+    font-family: 'Fira Sans', sans-serif; /* Back to Fira Sans for body */
+    margin: 0;
+    padding: 0;
+    /* Full-width border effect (subtle glow along edges) */
+    box-shadow: inset 0 0 50px rgba(106, 13, 173, 0.5); 
+}
+
+/* 3. IMAGE BANNER HEADER STYLE */
+.header-banner {
+    width: 100%;
+    height: 300px; /* Make it a large banner */
+    
+    /* Security/Data themed background image */
+    background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTMzNXwwfDF8c2VhcmNofDEyfHxjdWJlcnNlY3VyaXR5fGVufDB8fHx8MTcwMzY3MTQ5M3ww&ixlib=rb-4.0.3&q=80&w=1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7), 0 0 10px #8A2BE2; /* Purple glow */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Overlay for header banner */
+.header-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 1; /* Place overlay behind text */
+}
+
+/* 4. TEXT STYLES */
+h1, h2, h3, h4, p, li, a {
+    color: #FFFFFF !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Main Title Style (Inside the image banner) */
+.main-title {
+    font-family: 'EB Garamond', serif; /* <--- GARAMOND FOR MAIN TITLE */
+    text-align: center;
+    font-size: 3.2em; /* Slightly larger for impact */
+    font-weight: 700;
+    color: #00FFFF !important; /* Sharp Cyan color */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 0.5); 
+    margin: 0 auto; 
+    padding: 0 20px;
+    max-width: 100%;
+    z-index: 2; /* Ensure text is above the dark overlay */
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400; 
+    margin-top: 5px; 
+    margin-bottom: 40px; 
+    color: #C0C0C0 !important;
+    font-family: 'EB Garamond', serif; /* <--- GARAMOND FOR AUTHOR NAME */
+    font-size: 1.5em;
+}
+
+/* Main Section Headings (H3) */
+h3 {
+    margin-top: 60px; 
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif; /* Montserrat for impact */
+    color: #FF00FF !important; /* Rich Magenta accent for sections */
+    font-weight: 700; 
+    font-size: 1.8em;
+    padding-left: 10px; 
+    border-left: 4px solid #8A2BE2; /* BlueViolet accent line */
+}
+
+/* Base Subheadings (H4) - Overridden by color classes */
+h4 {
+    font-family: 'Montserrat', sans-serif; /* Montserrat for impact */
+    color: #00FFFF !important; /* Default Cyan color for any H4 without a class */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+/* --- COLOR CODING FOR H4 SUBHEADINGS --- */
+.red-h4 {
+    color: #FF0000 !important; /* UPDATED: Pure Red for Stats/Critical Data */
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8); /* Stronger glow */
+}
+
+.green-h4 {
+    color: #00FF00 !important; /* UPDATED: Pure Lime Green for Execution/Compliance */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.8); /* Stronger glow */
+}
+
+.yellow-h4 {
+    color: #FFD700 !important; /* Gold/Yellow for general topics or lists */
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.6);
+}
+
+/* Base font size and spacing for content */
+p, li {
+    font-size: 1.15em; /* Adjusted size for Fira Sans */
+    line-height: 1.8; 
+    margin-bottom: 1.2em; 
+    padding-left: 10px; 
+}
+
+ul {
+    margin-left: 30px;
+    list-style: disc; 
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.8em;
+}
+
+/* 5. CONTENT CONTAINER */
+.content-wrapper {
+    background-color: rgba(10, 10, 20, 0.95); 
+    padding: 60px 100px; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8); 
+    /* Subtle accent border glow */
+    border-left: 1px solid rgba(138, 43, 226, 0.5); 
+    border-right: 1px solid rgba(138, 43, 226, 0.5);
+    border-bottom: 1px solid rgba(138, 43, 226, 0.5);
+}
